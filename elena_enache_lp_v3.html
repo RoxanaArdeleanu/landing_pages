@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cursuri Colorimetrie & Hairstyling Avansat — Elena Enache, Iași</title>
+  <meta name="description" content="Curs intensiv de colorimetrie și hairstyling în Iași. Tehnici reale, fundament științific, feedback în timp real. Elena Enache — hairstylist, coloristă și trainer activ." />
+
+  <!-- ============================================================
+    META PIXEL — înlocuiește YOUR_PIXEL_ID cu ID-ul real al Elenei
+    Găsești ID-ul în Meta Business Manager → Events Manager
+  ============================================================ -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- ============================================================ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:      #E8DFD0;
+      --cream-dark: #D9CCBA;
+      --ink:        #1A1714;
+      --brown:      #5C3D2E;
+      --gold:       #B8946A;
+      --gold-light: #D4B896;
+      --muted:      #6A5A4C;
+      --border:     #C8BAA8;
+      --white:      #F2EBE0;
+      --wa-green:   #25D366;
+      --wa-dark:    #128C7E;
+      --radius:     14px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── TYPOGRAPHY ── */
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    em { font-style: italic; color: var(--brown); }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 2rem;
+      background: rgba(248,244,238,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .nav-brand span { color: var(--gold); }
+    .nav-sub {
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.6rem 1.25rem;
+      background: var(--ink);
+      color: var(--cream);
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--brown); }
+
+    /* ── URGENCY BAR ── */
+    .urgency-bar {
+      margin-top: 72px;
+      background: linear-gradient(90deg, #8B1A1A 0%, #B22222 50%, #8B1A1A 100%);
+      color: #fff;
+      text-align: center;
+      padding: 1rem 1.5rem;
+      font-size: 0.92rem;
+      letter-spacing: 0.07em;
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(139,26,26,0.35);
+    }
+    .urgency-bar::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(
+        90deg, transparent, transparent 40px,
+        rgba(255,255,255,0.03) 40px, rgba(255,255,255,0.03) 80px
+      );
+    }
+    .urgency-bar .ub-inner {
+      position: relative; z-index: 1;
+      display: flex; align-items: center; justify-content: center;
+      gap: 1rem; flex-wrap: wrap;
+    }
+    .urgency-bar .ub-fire { font-size: 1.2rem; animation: pulse 1.5s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.25)} }
+    .urgency-bar .ub-spots {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 50px;
+      padding: 0.2rem 0.9rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #FFE08A;
+      letter-spacing: 0.04em;
+    }
+    .urgency-bar .ub-sep { opacity: 0.35; }
+    #countdown {
+      font-weight: 700;
+      color: #FFE08A;
+      font-size: 1rem;
+      font-family: 'Courier New', monospace;
+      background: rgba(0,0,0,0.22);
+      padding: 0.15rem 0.65rem;
+      border-radius: 6px;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 90vh;
+      display: flex; align-items: center;
+      padding: 5rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 80% 50%, rgba(184,148,106,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 20% 80%, rgba(92,61,46,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 760px; margin: 0 auto; text-align: center;
+      animation: fadeUp 0.8s ease both;
+    }
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold-light);
+      border-radius: 50px;
+      padding: 0.35rem 1rem;
+      margin-bottom: 1.75rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.8;
+    }
+    .hero-stats {
+      display: flex; justify-content: center; gap: 2.5rem;
+      margin: 2.5rem 0;
+      flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--brown);
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── SECTION BASE ── */
+    section { padding: 5rem 2rem; }
+    .section-inner { max-width: 840px; margin: 0 auto; }
+    .section-tag {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── PAIN POINTS ── */
+    .pain { background: var(--white); }
+    .pain-intro {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .pain-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      background: var(--cream);
+      position: relative;
+    }
+    .pain-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 600;
+      color: var(--cream-dark);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .pain-card p { font-size: 0.92rem; color: var(--muted); line-height: 1.7; }
+
+    /* ── SOLUTION ── */
+    .solution-lead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      max-width: 640px;
+      line-height: 1.8;
+    }
+    .solution-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.75rem;
+    }
+    .solution-list li {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      padding: 0.75rem 1rem;
+      background: var(--white);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+    .solution-list li::before {
+      content: '✦';
+      color: var(--gold);
+      font-size: 0.7rem;
+      margin-top: 0.2rem;
+      flex-shrink: 0;
+    }
+
+    /* ── MODULES ── */
+    .modules { background: var(--ink); color: var(--cream); }
+    .modules .section-tag { color: var(--gold-light); }
+    .modules .section-title { color: var(--cream); }
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .module-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: background 0.2s;
+    }
+    .module-card:hover { background: rgba(255,255,255,0.09); }
+    .module-icon { font-size: 1.5rem; margin-bottom: 0.75rem; display: block; }
+    .module-card h3 {
+      font-size: 1.1rem;
+      color: var(--gold-light);
+      margin-bottom: 0.5rem;
+    }
+    .module-card p { font-size: 0.85rem; color: rgba(248,244,238,0.65); line-height: 1.6; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { background: var(--cream-dark); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    .testimonial {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      border: 1px solid var(--border);
+    }
+    .stars { color: var(--gold); font-size: 0.85rem; margin-bottom: 1rem; letter-spacing: 0.1em; }
+    .testimonial p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.25rem; }
+    .testimonial-author { display: flex; align-items: center; gap: 0.75rem; }
+    .author-avatar {
+      width: 38px; height: 38px;
+      background: var(--brown);
+      color: var(--cream);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .author-name { font-size: 0.88rem; font-weight: 500; }
+    .author-role { font-size: 0.75rem; color: var(--muted); }
+
+    /* ── TRAINER ── */
+    .trainer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    @media (max-width: 640px) { .trainer-grid { grid-template-columns: 1fr; } }
+    .trainer-photo {
+      width: 100%; aspect-ratio: 3/4;
+      background: linear-gradient(135deg, var(--cream-dark), var(--border));
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      color: var(--muted);
+      text-align: center;
+      padding: 2rem;
+      border: 1px solid var(--border);
+    }
+    .trainer-text p { font-size: 0.95rem; color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+    .trainer-stats { display: flex; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap; }
+    .t-stat { }
+    .t-stat-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--brown);
+      display: block;
+    }
+    .t-stat-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+    /* ── FAQ ── */
+    .faq { background: var(--white); }
+    .faq-list { margin-top: 2rem; }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 0;
+    }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--ink);
+      padding: 0;
+    }
+    .faq-icon {
+      width: 24px; height: 24px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      color: var(--gold);
+      flex-shrink: 0;
+      transition: transform 0.25s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-item.open .faq-a { max-height: 200px; padding-top: 0.75rem; }
+
+    /* ── CTA / ÎNREGISTRARE ── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--brown) 0%, #3a2218 100%);
+      color: var(--cream);
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+    .cta-section .section-tag { color: var(--gold-light); }
+    .cta-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .cta-subtitle {
+      font-size: 1rem;
+      color: rgba(248,244,238,0.7);
+      max-width: 520px;
+      margin: 0 auto 3rem;
+      line-height: 1.8;
+    }
+
+    /* ── WHATSAPP BUTTONS ── */
+    .wa-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 460px;
+      margin: 0 auto;
+    }
+    .wa-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 1.1rem 2rem;
+      border-radius: 50px;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.97rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      letter-spacing: 0.03em;
+    }
+    .wa-btn:hover { transform: translateY(-2px); }
+    .wa-btn svg { width: 22px; height: 22px; flex-shrink: 0; }
+
+    .wa-btn-training {
+      background: var(--wa-green);
+      color: #fff;
+      box-shadow: 0 6px 28px rgba(37,211,102,0.35);
+    }
+    .wa-btn-training:hover { box-shadow: 0 8px 32px rgba(37,211,102,0.5); }
+
+    .wa-btn-autocoafat {
+      background: rgba(255,255,255,0.1);
+      color: var(--cream);
+      border: 1.5px solid rgba(255,255,255,0.3);
+    }
+    .wa-btn-autocoafat:hover { background: rgba(255,255,255,0.18); }
+
+    .wa-label {
+      display: flex; flex-direction: column; align-items: flex-start; gap: 0.1rem;
+    }
+    .wa-label-main { font-size: 0.97rem; font-weight: 500; }
+    .wa-label-sub { font-size: 0.72rem; opacity: 0.75; font-weight: 300; }
+
+    .cta-note {
+      margin-top: 1.75rem;
+      font-size: 0.78rem;
+      color: rgba(248,244,238,0.5);
+      line-height: 1.6;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      color: rgba(248,244,238,0.5);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+    }
+    footer strong { color: var(--gold-light); font-weight: 400; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      nav { padding: 1rem 1.25rem; }
+      .nav-sub { display: none; }
+      section { padding: 3.5rem 1.25rem; }
+      .hero { padding: 3rem 1.25rem; }
+      .trainer-stats { gap: 1.25rem; }
+      .wa-buttons { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div>
+    <a href="#" class="nav-brand">Elena <span>Enache</span></a>
+    <div class="nav-sub">Hairstylist · Coloristă · Trainer</div>
+  </div>
+  <a href="#inscriere" class="nav-cta">Rezervă loc</a>
+</nav>
+
+<!-- URGENCY BAR -->
+<div class="urgency-bar">
+  <div class="ub-inner">
+    <span class="ub-fire">🔥</span>
+    <span>Grăbește-te —</span>
+    <span class="ub-spots">Doar 2 locuri rămase</span>
+    <span class="ub-sep">|</span>
+    <span>Seria se închide în</span>
+    <span id="countdown">00:00:00</span>
+    <span class="ub-fire">🔥</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-tag">Curs intensiv · Iași</span>
+    <h1>Colorimetrie, tuns, vopsit —<br>tot ce trebuie să știi, <em>într-o singură zi.</em></h1>
+    <p>Un curs practic, fără teorie inutilă, în care pleci cu tehnici reale pe care le poți folosi a doua zi cu clienții tăi. Pentru stilistele serioase, nu pentru cele care caută un certificat de pus pe perete.</p>
+    <a href="#inscriere" class="nav-cta" style="display:inline-flex;font-size:0.95rem;padding:0.9rem 2rem;">Vreau un loc</a>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-val">1</span>
+        <span class="stat-label">Zi intensivă</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val">Iași</span>
+        <span class="stat-label">Locație</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val">2</span>
+        <span class="stat-label">Locuri rămase</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="pain">
+  <div class="section-inner reveal">
+    <span class="section-tag">Îți sună cunoscut?</span>
+    <h2 class="section-title">Lucrezi de ani de zile, dar tot simți că <em>ceva lipsește.</em></h2>
+    <p class="pain-intro">Nu e lipsa de talent. E lipsa unui fundament real. Majoritatea cursurilor îți arată ce să faci — nimeni nu îți explică de ce funcționează. Și exact asta face diferența dintre o stilistă bună și una pe care clienții o recomandă mai departe.</p>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-num">01</div>
+        <p>Ai vopsit părul după același procedeu de zeci de ori — și totuși rezultatele ies diferit de la clientă la clientă. Și nu știi exact de ce.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-num">02</div>
+        <p>Ai urmărit tutoriale, ai practicat, ai mai fost la cursuri — dar când vine cineva cu părul complicat, tot îți intră un nod în stomac.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-num">03</div>
+        <p>Clientele vin cu poze de pe Instagram și tu nu ești sigură că poți livra exact aia. Și nu vrei să promiți ce nu știi dacă poți face.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-num">04</div>
+        <p>Simți că ești blocată la același nivel de prea mult timp — și știi că ai putea face mai mult, dacă ai ști cum să gândești altfel culoarea și tăietura.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA INLINE după pain -->
+<div style="text-align:center;padding:0 2rem 4rem;">
+  <a href="#inscriere" class="nav-cta" style="display:inline-flex;font-size:1rem;padding:1rem 2.5rem;background:var(--brown);letter-spacing:0.05em;">
+    Vreau să rezerv un loc →
+  </a>
+</div>
+
+<!-- SOLUTION -->
+<section>
+  <div class="section-inner reveal">
+    <span class="section-tag">Soluția</span>
+    <h2 class="section-title">Cunoașterea înlocuiește <em>ghicitul.</em></h2>
+    <p class="solution-lead">În cursul meu nu înveți rețete. Înveți să citești părul. Să înțelegi structura lui, istoricul lui, cum reacționează la culoare. Când știi asta, orice rezultat devine reproductibil — nu o întâmplare fericită.</p>
+    <ul class="solution-list">
+      <li>Colorimetrie aplicată — principii de știința culorii traduse în practică reală, pe păr real</li>
+      <li>Analiză individualizată a structurii firului înainte de orice tratament</li>
+      <li>Tehnici de balayage și colorare avansată cu fundament științific, nu empiric</li>
+      <li>Feedback în timp real de la un trainer care lucrează zilnic în salon</li>
+      <li>Portofoliu realizat în timpul cursului — nu simulare, ci lucrări reale</li>
+      <li>Acces la cunoștința care transformă un stilist bun într-unul excepțional</li>
+    </ul>
+  </div>
+</section>
+
+<!-- MODULES -->
+<section class="modules">
+  <div class="section-inner reveal">
+    <span class="section-tag">Ce înveți</span>
+    <h2 class="section-title" style="color:var(--cream)">O zi în care <em style="color:var(--gold-light)">totul capătă sens</em></h2>
+    <div class="modules-grid">
+      <div class="module-card">
+        <span class="module-icon">🎨</span>
+        <h3>Colorimetrie aplicată</h3>
+        <p>Teoria culorii tradusă în decizii practice. Cum funcționează roata culorilor pe păr real, cum citești tonul natural și cum alegi culoarea corectă.</p>
+      </div>
+      <div class="module-card">
+        <span class="module-icon">🔬</span>
+        <h3>Analiza structurii</h3>
+        <p>Cum evaluezi porozitatea, densitatea și istoricul chimic al firului. Fără această analiză, orice colorare e o loterie. Cu ea, rezultatul e predictibil.</p>
+      </div>
+      <div class="module-card">
+        <span class="module-icon">✂️</span>
+        <h3>Tehnici avansate</h3>
+        <p>Balayage natural, highlight de precizie, colorare globală controlată. Aplicate cu înțelegerea procesului, nu ca pași mecanici.</p>
+      </div>
+      <div class="module-card">
+        <span class="module-icon">💡</span>
+        <h3>Troubleshooting</h3>
+        <p>Ce faci când culoarea iese altfel decât ai planificat. Cum corectezi fără să agravezi. Ce să nu faci niciodată — și de ce.</p>
+      </div>
+      <div class="module-card">
+        <span class="module-icon">📋</span>
+        <h3>Consultația clientei</h3>
+        <p>Cum conduci o consultație înainte de colorare. Ce întrebări pui, cum gestionezi așteptările nerealiste, cum construiești loialitate.</p>
+      </div>
+      <div class="module-card">
+        <span class="module-icon">📦</span>
+        <h3>Produse profesionale</h3>
+        <p>Cum alegi și utilizezi produse de calitate profesională, inclusiv din gama MilkShake. Ce recomanzi clientelor pentru menținere acasă.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA INLINE după module -->
+<div style="text-align:center;padding:0 2rem 5rem;background:var(--ink);">
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:rgba(248,244,238,0.7);margin-bottom:1.25rem;font-style:italic;">Locurile se ocupă cu 2–3 săptămâni înainte de start.</p>
+  <a href="#inscriere" class="nav-cta" style="display:inline-flex;font-size:1rem;padding:1rem 2.5rem;background:var(--gold);color:var(--ink);letter-spacing:0.05em;font-weight:600;">
+    Rezervă locul tău acum →
+  </a>
+</div>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="section-inner reveal">
+    <span class="section-tag">Ce spun cursantele</span>
+    <h2 class="section-title">Nu testimoniale. <em>Transformări.</em></h2>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>Înainte de cursul Elenei, știam tehnica — dar nu înțelegeam de ce uneori ieșea bine și alteori nu. Acum știu să citesc părul clientelor înainte să pun mâna pe vopsea. Asta face toată diferența.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div>
+            <div class="author-name">Andreea M.</div>
+            <div class="author-role">Hairstylist, Iași</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>Am mai fost la cursuri înainte. Acesta e primul în care am înțeles principiile, nu doar pașii. Elena are răbdare să explice de ce — și asta e exact ce îmi lipsea.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">M</div>
+          <div>
+            <div class="author-name">Maria C.</div>
+            <div class="author-role">Coafor, Bacău</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>Am plecat cu un portofoliu real și cu încrederea că știu ce fac. Nu am mai ieșit dintr-un curs simțindu-mă astfel. Recomand oricărei stiliste care vrea să evolueze serios.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">I</div>
+          <div>
+            <div class="author-name">Ioana P.</div>
+            <div class="author-role">Coloristă, Suceava</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA INLINE după testimoniale -->
+<div style="text-align:center;padding:0 2rem 5rem;background:var(--cream-dark);">
+  <a href="#inscriere" class="nav-cta" style="display:inline-flex;font-size:1rem;padding:1rem 2.5rem;background:var(--ink);letter-spacing:0.05em;">
+    Vreau și eu un loc →
+  </a>
+</div>
+
+<!-- TRAINER -->
+<section>
+  <div class="section-inner reveal">
+    <div class="trainer-grid">
+      <div class="trainer-photo">
+        [Foto Elena Enache<br>în salon]
+      </div>
+      <div class="trainer-text">
+        <span class="section-tag">Trainer</span>
+        <h2 class="section-title">Nu un instructor.<br>Un <em>profesionist</em> activ.</h2>
+        <p>Elena Enache este hairstylist, coloristă și trainer cu experiență în servicii premium de salon în Iași. Cursurile ei nu vin din manuale — vin din ceea ce aplică zilnic cu clienții reali.</p>
+        <p>Specializată în colorimetrie avansată, balayage și tehnici de hairstyling, Elena folosește produse profesionale din gama MilkShake — pe care le cunoaște în detaliu și le recomandă cu argumente, nu cu etichete.</p>
+        <p>Ce diferențiază cursurile ei: feedback în timp real, bazat pe ce se întâmplă în fața ta, nu teorie generică.</p>
+        <div class="trainer-stats">
+          <div class="t-stat">
+            <span class="t-stat-val">10+</span>
+            <span class="t-stat-label">Ani experiență</span>
+          </div>
+          <div class="t-stat">
+            <span class="t-stat-val">100+</span>
+            <span class="t-stat-label">Cursante formate</span>
+          </div>
+          <div class="t-stat">
+            <span class="t-stat-val">Iași</span>
+            <span class="t-stat-label">Activ în salon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA INLINE după trainer -->
+<div style="text-align:center;padding:0 2rem 5rem;">
+  <a href="#inscriere" class="nav-cta" style="display:inline-flex;font-size:1rem;padding:1rem 2.5rem;background:var(--brown);letter-spacing:0.05em;">
+    Rezervă loc la curs →
+  </a>
+</div>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-inner reveal">
+    <span class="section-tag">Întrebări frecvente</span>
+    <h2 class="section-title">Ai <em>întrebări.</em> Avem răspunsuri.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">
+          Trebuie să am experiență anterioară pentru a participa?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Nu este necesară experiență anterioară în tehnici avansate, dar cursul este destinat persoanelor care au noțiuni de bază în hairstyling sau coafor. Dacă ești la început complet, îți recomand să ne contactezi înainte — discutăm ce variantă ți se potrivește cel mai bine.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Primesc certificat la finalul cursului?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Da, fiecare cursantă primește un certificat de participare la finalul zilei. Acesta atestă modulele parcurse și tehnicile studiate.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Câte locuri sunt disponibile per serie?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Fiecare serie are maxim 6–8 cursante. Numărul mic este deliberat — feedback personalizat nu se poate oferi în grupe mari. Locurile se ocupă rapid, de obicei cu 2–3 săptămâni înainte de start.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Cum funcționează plata și rezervarea?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Dai click pe butonul de mai jos, îmi trimiți un mesaj pe WhatsApp și discutăm toate detaliile. Nu există plată online — totul se confirmă direct între noi.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Pot veni din alt oraș? Există cazare recomandată?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Absolut. Avem cursante care vin din Bacău, Suceava, Neamț, Vaslui. Cursul se desfășoară în Iași — la înregistrare îți trimit locația exactă și câteva opțiuni de cazare în apropiere.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Ce materiale și produse se folosesc în curs?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Toate materialele necesare sunt incluse în prețul cursului. Lucrăm cu produse profesionale, inclusiv din gama MilkShake. Nu ai nevoie să aduci nimic în afara ta.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA — ÎNREGISTRARE CU WHATSAPP -->
+<section class="cta-section" id="inscriere">
+  <span class="section-tag">Rezervă-ți locul</span>
+  <h2 class="cta-title">Scrie-mi direct.<br><em style="color:var(--gold-light)">Îți răspund eu personal.</em></h2>
+  <p class="cta-subtitle">
+    Nicio plată online, nicio birocrație. Dai click, îmi trimiți un mesaj și discutăm toate detaliile. Locurile sunt limitate — seria viitoare are doar 2 locuri rămase.
+  </p>
+
+  <div class="wa-buttons">
+
+    <!--
+      =====================================================================
+      BUTON 1 — CURS TRAINING (stiliste & coloriști)
+      Înlocuiește 40XXXXXXXXXX cu numărul Elenei (ex. 40712345678)
+      UTM-urile din link identifică sursa în Meta Ads Manager
+      =====================================================================
+    -->
+    <a
+      class="wa-btn wa-btn-training"
+      href="https://wa.me/40XXXXXXXXXX?text=Bun%C4%83+Elena!+Am+v%C4%83zut+cursul+de+colorimetrie+%26+hairstyling+pe+site+%C8%99i+a%C8%99+vrea+s%C4%83+rezerv+un+loc.+M%C4%83+po%C8%9Bi+da+mai+multe+detalii%3F"
+      target="_blank"
+      rel="noopener"
+      onclick="trackWA('training')"
+    >
+      <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.478.677 4.797 1.854 6.785L2 30l7.44-1.832A13.94 13.94 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.6a11.56 11.56 0 0 1-5.89-1.608l-.422-.25-4.417 1.088 1.122-4.295-.277-.44A11.56 11.56 0 0 1 4.4 16C4.4 9.593 9.593 4.4 16 4.4S27.6 9.593 27.6 16 22.407 27.6 16 27.6zm6.343-8.67c-.347-.174-2.054-1.013-2.374-1.13-.32-.116-.553-.174-.786.174-.232.347-.9 1.13-1.103 1.362-.203.232-.406.26-.753.087-.347-.174-1.466-.54-2.793-1.722-1.032-.92-1.728-2.055-1.931-2.402-.203-.347-.022-.534.153-.707.157-.155.347-.406.52-.609.174-.203.232-.347.347-.58.116-.232.058-.435-.029-.609-.087-.174-.786-1.896-1.077-2.594-.283-.682-.572-.59-.786-.6l-.668-.012c-.232 0-.61.087-.928.435s-1.22 1.19-1.22 2.9c0 1.71 1.249 3.363 1.422 3.595.174.232 2.458 3.754 5.956 5.264.833.36 1.482.574 1.988.735.835.267 1.595.23 2.196.139.67-.1 2.054-.84 2.346-1.652.29-.812.29-1.508.203-1.652-.087-.145-.32-.232-.667-.406z"/></svg>
+      <div class="wa-label">
+        <span class="wa-label-main">Vreau loc la cursul de training</span>
+        <span class="wa-label-sub">Colorimetrie & Hairstyling avansat — stiliste</span>
+      </div>
+    </a>
+
+    <!--
+      =====================================================================
+      BUTON 2 — CURS AUTOCOAFAT (cliente finale)
+      Același număr, mesaj diferit — astfel știi care curs a generat lead-ul
+      =====================================================================
+    -->
+    <a
+      class="wa-btn wa-btn-autocoafat"
+      href="https://wa.me/40XXXXXXXXXX?text=Bun%C4%83+Elena!+Am+v%C4%83zut+cursul+de+autocoafat+pe+site+%C8%99i+m%C4%83+intereseaz%C4%83+s%C4%83+aflu+mai+multe.+Cnd+e+urm%C4%83toarea+serie%3F"
+      target="_blank"
+      rel="noopener"
+      onclick="trackWA('autocoafat')"
+    >
+      <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.478.677 4.797 1.854 6.785L2 30l7.44-1.832A13.94 13.94 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.6a11.56 11.56 0 0 1-5.89-1.608l-.422-.25-4.417 1.088 1.122-4.295-.277-.44A11.56 11.56 0 0 1 4.4 16C4.4 9.593 9.593 4.4 16 4.4S27.6 9.593 27.6 16 22.407 27.6 16 27.6zm6.343-8.67c-.347-.174-2.054-1.013-2.374-1.13-.32-.116-.553-.174-.786.174-.232.347-.9 1.13-1.103 1.362-.203.232-.406.26-.753.087-.347-.174-1.466-.54-2.793-1.722-1.032-.92-1.728-2.055-1.931-2.402-.203-.347-.022-.534.153-.707.157-.155.347-.406.52-.609.174-.203.232-.347.347-.58.116-.232.058-.435-.029-.609-.087-.174-.786-1.896-1.077-2.594-.283-.682-.572-.59-.786-.6l-.668-.012c-.232 0-.61.087-.928.435s-1.22 1.19-1.22 2.9c0 1.71 1.249 3.363 1.422 3.595.174.232 2.458 3.754 5.956 5.264.833.36 1.482.574 1.988.735.835.267 1.595.23 2.196.139.67-.1 2.054-.84 2.346-1.652.29-.812.29-1.508.203-1.652-.087-.145-.32-.232-.667-.406z"/></svg>
+      <div class="wa-label">
+        <span class="wa-label-main">Mă interesează cursul de autocoafat</span>
+        <span class="wa-label-sub">Pentru cliente care vor să-și coafeze singure părul</span>
+      </div>
+    </a>
+
+  </div>
+
+  <p class="cta-note">
+    Fără obligații. Fără plată online. Îți confirm eu disponibilitatea și discutăm toate detaliile înainte de orice angajament.
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <strong>Elena Enache</strong> &nbsp;·&nbsp; Hairstylist · Coloristă · Trainer · Iași
+</footer>
+
+<script>
+  // ── COUNTDOWN ──
+  function updateCountdown() {
+    const end = new Date();
+    end.setHours(23, 59, 59, 0);
+    const now = new Date();
+    const diff = end - now;
+    if (diff <= 0) { document.getElementById('countdown').textContent = ''; return; }
+    const h = Math.floor(diff / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('countdown').textContent =
+      `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // ── SCROLL REVEAL ──
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ── FAQ ──
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // ── META PIXEL — tracking click pe butoane WhatsApp ──
+  function trackWA(tip) {
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Lead', { content_name: 'WhatsApp_' + tip });
+    }
+  }
+
+  // ── UTM SOURCE din URL → adăugat în mesajul WhatsApp ──
+  // Dacă pagina e accesată cu ?utm_source=facebook, mesajul WhatsApp
+  // va include automat sursa — util pentru atribuire manuală
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    const src = params.get('utm_source') || '';
+    const campaign = params.get('utm_campaign') || '';
+    if (!src) return;
+    const suffix = encodeURIComponent(' [sursa: ' + src + (campaign ? ' / ' + campaign : '') + ']');
+    document.querySelectorAll('.wa-btn').forEach(btn => {
+      btn.href = btn.href + suffix;
+    });
+  })();
+</script>
+
+</body>
+</html>
